@@ -1,0 +1,622 @@
+
+footer {
+    font-size: 16px;
+    position: fixed;
+    bottom: 20px;
+    left: 500px;
+    color: #484853;
+    text-align: center;
+}
+
+
+html {
+    background-color: #2a2a38;
+    font-family: 'Lucida Grande',Tahoma, Verdana, Arial, sans-serif;
+    /*font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;*/
+    color: #d4d3e8;
+  }
+
+body {
+    margin: 0;
+    border-width: 0;
+    padding: 0;
+}
+
+header#header {
+    height: 260px;
+    margin: 0;
+    border-width: 0;
+    padding: 0;
+    border-bottom-width: 2px;
+    border-color: #d1cfe6;
+    border-style: outset;
+    /*background: no-repeat 30%/40% url("../img/logo_algorab.jpg");*/
+    background-color: #13131c;
+}
+
+img#algorab {
+    position: absolute;
+    top: 18px;
+    left: 525px;
+    width: 220px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+img#algorab:hover {
+    transform: scale(1.1, 1.1);
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+section#menu {
+    position: absolute;
+    top: 100px;
+}
+
+ul#menu {
+    padding:0;
+    margin:0;
+    list-style-type:none;
+}
+
+li#menu_list_gauche_con {
+    text-align:center;
+    text-decoration:none;
+    margin-left:70px;
+    float:left; /*pour IE*/
+}
+
+li#menu_list_droit_con {
+    position: relative;
+    left: 340px;
+    margin-left:50px;
+    top:-35px;
+    float:left; /*pour IE*/
+}
+
+a#menu_list_droit_con_bas {
+    position: relative;
+    font-size:20px;
+    text-decoration:none;
+    transition: all 0.3s ease;
+    color: #d1cfe6;
+    display: block;
+    width: 130px;
+    height: 25px;
+    background: #13131c;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 25px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #d1cfe6;
+    left:30px;
+    margin-left:50px;
+    top:55px;
+    float:left; /*pour IE*/
+}
+
+a#menu_list_droit_con_bas:hover {
+    color: #13131c;
+    background: #d1cfe6;
+}
+
+li#menu_list_droit_discon {
+    position: relative;
+    left: 410px;
+    margin-left:70px;
+    float:left; /*pour IE*/
+}
+
+li#menu_list_gauche_discon {
+    text-align:center;
+    text-decoration:none;
+    margin-left:190px;
+    float:left; /*pour IE*/
+}
+
+a#standard, a#disconnect {
+    font-size:20px;
+    text-decoration:none;
+    transition: all 0.3s ease;
+}
+
+a#standard {
+    color: #d1cfe6;
+    display: block;
+    width: 130px;
+    height: 25px;
+    background: #13131c;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 25px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #d1cfe6;
+}
+
+a#standard:hover {
+    color: #13131c;
+    background: #d1cfe6;
+}
+
+a#disconnect {
+    color: #a05757;
+    display: block;
+    width: 130px;
+    height: 25px;
+    background: #13131c;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 25px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #a05757;
+}
+
+a#disconnect:hover {
+    color: #13131c;
+    background: #a05757;
+}
+
+section#logos {
+    position: absolute;
+    top: 330px;
+    left: 440px;
+}
+
+img#logo_spotify, img#logo_deezer, img#logo_youtube {
+    position: absolute;
+    margin: 20px 20px 20px 20px;
+    width: 75px;
+    left: 20px;
+    transition: transform 0.3s ease;
+}
+
+img#logo_deezer {
+    left:140px;
+}
+
+img#logo_youtube {
+    left:260px;
+}
+
+img#logo_spotify:hover, img#logo_deezer:hover, img#logo_youtube:hover {
+    transform: scale(1.2, 1.2);
+}
+
+body#login {
+    font-size: 20px;
+}
+
+form#login_form {
+    position: absolute;
+    top: 300px;
+    left: 450px;
+    text-align: right;
+}
+
+#id_email, #id_password, #id_name, #id_address, #id_surname, #id_postal_code, #id_city {
+    margin-top : 10px;
+    margin-bottom: 10px;
+}
+
+input#id_email, input#id_password, input#id_name, input#id_address, #id_surname, #id_postal_code, #id_city  {
+    position: relative;
+    left: 10px;
+    padding: 0;
+    margin: 0;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #d1cfe6;
+    border-color:#aba9bb;
+    height: 25px;
+    width: 200px;
+}
+
+a#create_account {
+    position: relative;
+    font-size:15px;
+    text-decoration:none;
+    transition: all 0.3s ease;
+    color: #d1cfe6;
+    width: 130px;
+    height: 25px;
+    background: #13131c;
+    padding: 9px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 25px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d1cfe6;
+    top: 10px;
+    right: 10px;
+}
+
+a#create_account:hover {
+    color: #13131c;
+    background: #d1cfe6;
+}
+
+input[type="submit"]#login_input {
+    position: relative;
+    text-align: center;
+    padding: 9px;
+    font-size:15px;
+    transition: all 0.3s ease;
+    color: #d1cfe6;
+    background: #13131c;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d1cfe6;
+    top: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+input[type="submit"]#login_input:hover {
+    color: #13131c;
+    background: #d1cfe6;
+    cursor: pointer;
+}
+
+ul[class="errorlist nonfield"] {
+    font-size: 17px;
+    color: red;
+    position: absolute;
+    list-style-type:none;
+    text-align: center;
+    top: -35px;
+    width: 500px;
+    left: -110px;
+}
+
+input[type="submit"]#create_account {
+    position: relative;
+    text-align: center;
+    padding: 9px;
+    font-size:15px;
+    transition: all 0.3s ease;
+    color: #d1cfe6;
+    background: #13131c;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d1cfe6;
+    top: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+    left: 50px;
+}
+
+input[type="submit"]#create_account:hover {
+    color: #13131c;
+    background: #d1cfe6;
+    cursor: pointer;
+}
+
+a#retour_accueil {
+    position: relative;
+    font-size:15px;
+    text-decoration:none;
+    transition: all 0.3s ease;
+    color: #a05757;;
+    width: 130px;
+    height: 25px;
+    background: #13131c;
+    padding: 9px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 25px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #a05757;;
+    top: 10px;
+    right: -50px;
+}
+
+a#retour_accueil:hover {
+    transition: all 0.3s ease;
+    color: #13131c;
+    background: #a05757;;
+}
+
+form#create_form {
+    position: absolute;
+    top: 290px;
+    left: 430px;
+    text-align: right;
+}
+
+form#change_form {
+    position: absolute;
+    top: 280px;
+    left: 320px;
+    text-align: right;
+}
+
+h1#album {
+    position: relative;
+    left: 393px;
+    width: 500px;
+    text-align: center;
+}
+
+ul#albums_list{
+    position: relative;
+    padding:0;
+    margin:0;
+    list-style-type:none;
+    text-align: center;
+}
+
+li#album {
+    position: relative;
+    left: 13px;
+    text-align:center;
+    text-decoration:none;
+    margin-top:25px;
+    margin-left:45px;
+    margin-right:45px;
+    display: inline-block;
+}
+
+p#description {
+    text-align: justify;
+    font-size: 15px;
+    width: 300px;
+}
+
+div#prix_cd {
+    position: relative;
+    right: 100px;
+}
+
+div#prix_audio {
+    position: relative;
+    left: 100px;
+    top: -86px;
+}
+
+p#prix_audio, p#prix_cd {
+    font-weight: bold;
+}
+
+p.cd_add_no {
+    text-align: center;
+    padding: 7px;
+    font-size:14px;
+    width: 130px;
+    transition: all 0.3s ease;
+    color: #a05757;
+    background: #13131c;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #a05757;
+    position: relative;
+    left: 80px;
+}
+
+input[type="submit"]#audio_add, input[type="submit"].cd_add {
+    text-align: center;
+    padding: 7px;
+    font-size:14px;
+    transition: all 0.3s ease;
+    color: #d1cfe6;
+    background: #13131c;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d1cfe6;
+    cursor: pointer;
+}
+
+input[type="submit"].cd_add {
+    display: none;
+}
+
+input[type="submit"]#audio_add:hover, input[type="submit"].cd_add:hover {
+    color: #13131c;
+    background: #d1cfe6;
+    cursor: pointer;
+}
+
+img#logo_spotify_album, img#logo_deezer_album, img#logo_youtube_album {
+    position: relative;
+    margin: 5px 5px 5px 5px;
+    width: 60px;
+    transition: transform 0.3s ease;
+    top: -70px;
+    right: 38px;
+}
+
+img#logo_deezer_album {
+    left:-3px;
+}
+
+img#logo_youtube_album {
+    left:28px;
+}
+
+img#logo_spotify_album:hover, img#logo_deezer_album:hover, img#logo_youtube_album:hover {
+    transform: scale(1.2, 1.2);
+}
+
+img#logo_spotify_titre, img#logo_deezer_titre {
+    position: relative;
+    margin: 5px 5px 5px 5px;
+    width: 55px;
+    transition: transform 0.3s ease;
+    right: 20px;
+    top: 5px;
+}
+
+img#logo_deezer_titre {
+    left: 15px;
+}
+
+img#logo_spotify_titre:hover, img#logo_deezer_titre:hover {
+    transform: scale(1.2, 1.2);
+}
+
+h1#panier_titre {
+    text-align: center;
+}
+
+h1#titre_panier {
+    font-size: 20px;
+}
+
+ul#panier_liste {
+    list-style-type: none;
+}
+
+li#cd_panier, li#audio_panier {
+    margin-left: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+input[type="submit"]#del {
+    text-align: center;
+    padding: 7px;
+    font-size:14px;
+    transition: all 0.3s ease;
+    color: #d1cfe6;
+    background: #13131c;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d1cfe6;
+    cursor: pointer;
+}
+
+input[type="submit"]#del:hover {
+    color: #13131c;
+    background: #d1cfe6;
+    cursor: pointer;
+}
+
+h1#total_panier {
+    position: relative;
+    left: 120px;
+    width: 500px;
+}
+
+a#checkout {
+    position: relative;
+    font-size:20px;
+    text-decoration:none;
+    transition: all 0.3s ease;
+    color: #d1cfe6;
+    width: 130px;
+    height: 25px;
+    background: #13131c;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 25px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #d1cfe6;
+    left: 370px;
+    top: -52px;
+}
+
+a#checkout:hover {
+    color: #13131c;
+    background: #d1cfe6;
+}
+
+section#message {
+    position: relative;
+    right: -20px;
+    top: 10px;
+}
+
+textarea#message {
+    position: relative;
+    left: -115px;
+    top: 40px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #d1cfe6;
+    border-color:#aba9bb;
+    height: 500px;
+    width: 500px;
+    text-align: start;
+}
+
+input[type="submit"]#send_message {
+    position: relative;
+    text-align: center;
+    padding: 9px;
+    font-size:15px;
+    transition: all 0.3s ease;
+    color: #d1cfe6;
+    background: #13131c;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d1cfe6;
+    top: 90px;
+    cursor: pointer;
+    margin-right: 20px;
+    left: -365px;
+}
+
+input[type="submit"]#send_message:hover {
+    color: #13131c;
+    background: #d1cfe6;
+    cursor: pointer;
+}
+
+a#retour_contact {
+    position: relative;
+    font-size:15px;
+    text-decoration:none;
+    transition: all 0.3s ease;
+    color: #a05757;;
+    width: 130px;
+    height: 25px;
+    background: #13131c;
+    padding: 9px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 25px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #a05757;;
+    top: 57px;
+    left: 400px;
+}
+
+a#retour_contact:hover {
+    transition: all 0.3s ease;
+    color: #13131c;
+    background: #a05757;;
+}
+
+input#contact_email  {
+    position: relative;
+    top: -480px;
+    left: 390px;
+    padding: 0;
+    margin: 0;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #d1cfe6;
+    border-color:#aba9bb;
+    height: 25px;
+    width: 500px;
+}

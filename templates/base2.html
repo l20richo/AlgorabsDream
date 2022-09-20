@@ -1,0 +1,37 @@
+<!DOCTYPE HTML
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% block google %}{% endblock %}
+        <title>{% block title %}{% endblock %}</title>
+        <link href="/static/css/style2.css" rel="stylesheet" type="text/css">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+        <meta name="description" content="Site du projet musical Algorab's Dream, disponible sur toutes les plateformes de streaming."/>
+    </head>
+    <body id="{% block id %}generic{% endblock %}">
+        <header id="header">
+            <img id="algorab" src="/static/img/logo_algorab.png" alt="logo algorab" onclick="javascript:window.location='/home';" />
+            <section id="menu">
+                {% if logged_user %}
+                <ul id="menu">   
+                    <li id="menu_list_gauche_con"><a href="/realeases" id="standard">Sorties</a></li>
+                    <li id="menu_list_gauche_con"><a href="/panier" id="standard">Mon Panier</a></li> 
+                    <li id="menu_list_droit_con"><a href="/modify" id="standard">Mon compte</a></li>
+                    <li id="menu_list_droit_con"><a href="/disconnect" id="disconnect">Déconnexion</a></li>
+                    <a href="/contact" id="menu_list_droit_con_bas">Contact</a>
+                </ul>
+                {% else %}
+                <ul id="menu">
+                    <li id="menu_list_gauche_discon"><a href="/realeases" id="standard">Sorties</a></li>
+                    <li id="menu_list_droit_discon"><a href="/login" id="standard">Connexion</a></li>
+                    <li id="menu_list_droit_discon"><a href="/contact" id="standard">Contact</a></li>
+                </ul>
+                {% endif %}
+            </section>
+        </header>
+        <p id="content">{% block content %}{% endblock %}</p>
+        <footer> - © Copyright | Algorab's Dream 2022 - </footer>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Modification du compte{% endblock %}
+
+{% block id %}modification_page{% endblock %}
+
+{% block headerContent %}<h1 id="login">Modification de vos informations</h1>{% endblock %}
+
+{% block content %}
+  <div call="table">
+    <form action="modify" method="post" id="change_form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p>
+            <input type="submit" value="Appliquer les modifications" id="create_account"/>
+            <a href="/home" id="retour_accueil">Retour à l'accueil</a>
+        </p>
+    </form>
+  </div>
+{% endblock %}

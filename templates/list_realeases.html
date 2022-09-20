@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Realeases{% endblock %}
+
+{% block content %}
+    {% if albumsList %}
+    <section id="album_list">
+        <h1 id="album">Albums/EPs/Singles</h1>
+        <ul id="albums_list">
+            {% for album in albumsList %}
+            <li id="album">
+                <section id="presentation">
+                    <img src="{{ album.cover }}" alt="Pochette de {{ album.name }}" width="180px"/>
+                    <h1 id="realease_title">{{ album.name }}</h1>
+                </section>
+                <section id="vente">
+                    <p id="description">{{ album.description }}</p>
+                    <div id="prix_cd">
+                        <p id="prix_cd">CD : {{ album.prix_cd }}€</p>
+                        <form action="/realeases" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="add_cd_album" value="{{ album.id }}"/>
+                            <input type="submit" class="cd_add" value="Ajouter le CD au panier"/>
+                            <p class="cd_add_no">CD indisponible</p>
+                        </form>
+                        {% for cd in cds %}
+                            {% if cd.music == album %}
+                                {% if cd.stock > 0 %}
+                                <script>
+                                    document.getElementsByClassName('cd_add')[{{ forloop.counter0 }}].style.display='inline';
+                                    document.getElementsByClassName('cd_add_no')[{{ forloop.counter0 }}].style.display='none';
+                                </script>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div id="prix_audio">
+                        <p id="prix_audio">Audio : {{ album.prix_son }}€</p>
+                        <form action="/realeases" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="add_audio_album" value="{{ album.id }}"/>
+                            <input type="submit" id="audio_add" value="Ajouter l'audio au panier"/>
+                        </form>
+                    </div>
+                </section>
+                <section id="liens">
+                    <img id="logo_spotify_album" src="/static/img/logo_spotify.png" alt="logo_spotify" onclick="javascript:window.location='{{ album.lien_spotify }}';" style="cursor: pointer;"/>
+                    <img id="logo_deezer_album" src="/static/img/logo_deezer.png" alt="logo_deezer" onclick="javascript:window.location='{{ album.lien_deezer }}';" style="cursor: pointer;"/>
+                    <img id="logo_youtube_album" src="/static/img/logo_youtube.png" alt="logo_youtube" onclick="javascript:window.location='{{ album.lien_youtube }}';" style="cursor: pointer;"/>
+                </section>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% if titresList %}
+    <div id="titres">
+        <h1 id="album">Titres</h1>
+        <ul id="albums_list">
+            {% for titre in titresList %}
+            <li id="album">
+                <section id="presentation">
+                    <img src="{{ titre.cover }}" alt="Pochette de {{ titre.name }}" width="150px" />
+                    <h1 id="realease_title">{{ titre.name }}</h1>
+                </section>
+                <section id="vente">
+                    <p id="prix_audio">Audio : {{ titre.prix_son }}€</p>
+                    <form action="/realeases" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="add_audio_titre" value="{{ titre.id }}"/>
+                        <input type="submit" id="audio_add" value="Ajouter l'audio au panier"/>
+                    </form>
+                </section>
+                <section id="liens">
+                    <img id="logo_spotify_titre" src="/static/img/logo_spotify.png" alt="logo_spotify" onclick="javascript:window.location='{{ titre.lien_spotify }}';" style="cursor: pointer;"/>
+                    <img id="logo_deezer_titre" src="/static/img/logo_deezer.png" alt="logo_deezer" onclick="javascript:window.location='{{ titre.lien_deezer }}';" style="cursor: pointer;"/>
+                </section>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    <div style="width: 100%; height: 50px;"></div>
+
+{% endblock %}

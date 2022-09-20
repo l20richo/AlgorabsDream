@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block id %}login{% endblock %}
+
+{% block content %}
+  <div class="table">
+    <form action="login" method="post" id="login_form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p>
+            <input type="submit" value="Se connecter" id="login_input" />
+            <a href="/register" id="create_account">Créer un compte</a>
+        </p>
+    </form>
+  </div>
+{% endblock %}

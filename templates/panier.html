@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Mon panier{% endblock %}
+
+{% block id %}panier{% endblock %}
+
+{% block content %}
+    {% if panier.prix > 0 %}
+        {% if panier.cd %}
+        <h1 id="panier_titre">CDs</h1>
+        <ul id="panier_liste">
+            {% for cd in panier.cd.all %}
+            <li id="cd_panier">
+                <h1 id="titre_panier">{{ cd.music.name }}</h1>
+                <p id="prix_panier"> - {{ cd.music.prix_cd }}€</p>
+                <form action="/panier" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="cd_id" value="{{ cd.id }}"/>
+                    <input type="submit" id="del" value="Retirer du panier"/>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if panier.audio %}
+        <h1 id="panier_titre">Audios</h1>
+        <ul id="panier_liste">
+            {% for audio in panier.audio.all %}
+            <li id="audio_panier">
+                <h1 id="titre_panier">{{ audio.name }}</h1>
+                <p id="prix_panier"> - {{ audio.prix_son }}€</p>
+                <form action="/panier" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="audio_id" value="{{ audio.id }}"/>
+                    <input type="submit" id="del" value="Retirer du panier"/>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <h1 id="total_panier">Total : {{ panier.prix }}€</h1>
+        <a href="/checkout" id="checkout">Commander</a> 
+    {% else %}
+        <h1 id="panier_titre">Votre panier est vide.</h1>
+    {% endif %}
+{% endblock %}

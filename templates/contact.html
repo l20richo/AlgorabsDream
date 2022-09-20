@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<div class="table">
+<form id="contact" action="contact" method="post">
+    {% csrf_token %}
+    {% if not logged_user %}
+        <input type="email" name='email' placeholder="Entrez votre adresse e-mail" id="contact_email"/>
+    {% endif %}
+    <textarea type="text" name="message" id="message" placeholder="Entrez votre message ici..."></textarea>
+    
+    <div class="container_C">
+	<div class="box_C A">    
+	   <input type="submit" id="send_message" value="Envoyer le message" />
+	</div> 
+	<div class="box_C B">   
+	    <a id="retour_contact" href="/home">Retour à l'accueil</a>
+	</div>
+    </div>
+</form>
+</div>
+<div style="width: 100%; height: 90px;"></div>
+{% endblock %}
